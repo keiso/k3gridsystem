@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+body {
+	color:#000000;
+	background-color:#FFFFFF;
+}
+.container {
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left:20px;
+	zoom: 1;/*	IEでレイアウトが崩れる(hasLayout対策)	IE < 8 */
+}
+.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
+	display:inline;/*IE6で、フロートした要素のマージンが２倍になってしまうバグの解決*/
+	float: left;
+	position: relative;
+	margin-right: 20px;
+}
+.row {
+}
+
+/* IE7 only */
+*:first-child+html .row {
+　　overflow:hidden;
+}
+
+/* IE 対策 */
+* html .row {
+	height: 1%;
+}
+
+@columns:       11;
+@columnWidth:   60px;
+@gutterWidth:   20px;
+
+@col:1;
+
+.columns(@columnSpan: 1) {
+	width:(@columnWidth + @gutterWidth)* @columnSpan - @gutterWidth;
+}
+
+.span1 {
+	.columns(1);
+}
+.span2 {
+	.columns(2);
+}
+.span3 {
+	.columns(3);
+}
+.span4 {
+	.columns(4);
+}
+.span5 {
+	.columns(5);
+}
+.span6 {
+	.columns(6);
+}
+.span7 {
+	.columns(7);
+}
+.span8 {
+	.columns(8);
+}
+.span9 {
+	.columns(9);
+}
+.span10 {
+	.columns(10);
+}
+.span11 {
+	.columns(11);
+}
+.span12 {
+	.columns(12);
+	margin-right:0;
+}
+.last {
+	margin-right:0;
+}
