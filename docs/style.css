@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+h1, h2, p, ul {
+	margin: 10px;
+}
+.container {
+	background-image: url(image/bg_w980.png);
+	background-repeat: repeat-y;
+}
+body {
+/*	background-image: url(image/bg_slash.gif);*/
+}

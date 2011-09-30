@@ -2,6 +2,7 @@
 body{color:#000000;background-color:#FFFFFF;}
 .container{width:980px;margin-left:auto;margin-right:auto;padding-left:20px;zoom:1;}
 .span1,.span2,.span3,.span4,.span5,.span6,.span7,.span8,.span9,.span10,.span11,.span12{display:inline;float:left;position:relative;margin-right:20px;}
+.row{overflow:hidden;}
 *:first-child+html .row{overflow:hidden;}
 * html .row{height:1%;}
 .span1{width:60px;}
