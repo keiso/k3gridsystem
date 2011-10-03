@@ -1,0 +1,36 @@
+h1, h2,h3,p,pre,ul {
+	margin: 10px;
+}
+h1 {
+	font-size:24px;
+}
+h2 {
+	font-size:18px;
+	border-bottom: 1px solid #333;
+	border-left: 10px solid #333;
+	border-top: 1px solid #333;
+	border-right: 1px solid #333;
+	padding: 3px;
+	background-color: #FFF;
+}
+h3 {
+	font-size:14px;
+}
+p,pre {
+	font-size:14px;
+}
+
+
+small{
+	font-size:14px;
+	color:#999999;
+	padding-left:10px;
+}
+pre{
+	color:#999;
+}
+
+li {
+	list-style-type: disc;
+	list-style-position: inside;
+}
