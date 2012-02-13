@@ -86,3 +86,44 @@ padding-left:20px;
 .last {
 	margin-right:0;
 }
+
+.offsets(@columnSpan: 1) {
+	margin-left:(@columnWidth + @gutterWidth)* @columnSpan - @gutterWidth+20;
+}
+
+
+.offset1 {
+	.offsets(1);
+}
+
+.offset2 {
+	.offsets(2);
+}
+.offset3 {
+	.offsets(3);
+}
+.offset4 {
+	.offsets(4);
+}
+.offset5 {
+	.offsets(5);
+}
+.offset6 {
+	.offsets(6);
+}
+.offset7 {
+	.offsets(7);
+}
+.offset8 {
+	.offsets(8);
+}
+.offset9 {
+	.offsets(9);
+}
+.offset10 {
+	.offsets(10);
+}
+.offset11 {
+	.offsets(11);
+}
+
