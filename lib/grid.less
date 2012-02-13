@@ -16,10 +16,11 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: @gutterWidth;
-	zoom: 1;/*	IEでレイアウトが崩れる(hasLayout対策)	IE < 8 */
+	*zoom: 1;/*	IEでレイアウトが崩れる(hasLayout対策)	IE < 8 アスタリスクハック*/
 }
+
 .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12 {
-	display:inline;/*IE6で、フロートした要素のマージンが２倍になってしまうバグの解決*/
+	_display:inline;/*	IE6で、フロートした要素のマージンが２倍になってしまうバグの解決。アンダースコアハック	*/
 	float: left;
 	position: relative;
 	margin-right: @gutterWidth;
@@ -33,21 +34,25 @@ padding-left:20px;
 
 
 /* IE7 only */
+/*
 *:first-child+html .row {
-　　overflow:hidden;
+	overflow:hidden;
 }
+*/
 
 /* IE 対策 */
+/*
 * html .row {
 	height: 1%;
 }
+*/
 
 .columns(@columnSpan: 1) {
 	width:(@columnWidth + @gutterWidth)* @columnSpan - @gutterWidth;
 }
 
 .span1 {
-	.columns(1);
+	.columns();
 }
 .span2 {
 	.columns(2);
@@ -91,11 +96,9 @@ padding-left:20px;
 	margin-left:(@columnWidth + @gutterWidth)* @columnSpan - @gutterWidth+20;
 }
 
-
 .offset1 {
-	.offsets(1);
+	.offsets();
 }
-
 .offset2 {
 	.offsets(2);
 }
@@ -126,4 +129,3 @@ padding-left:20px;
 .offset11 {
 	.offsets(11);
 }
-

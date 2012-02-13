@@ -10,3 +10,10 @@ h1, h2, p, ul {
 body {
 /*	background-image: url(image/bg_slash.gif);*/
 }
+li {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+ul {
+	padding: 10px;
+}
